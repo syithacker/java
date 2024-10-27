@@ -1,0 +1,23 @@
+ 
+interface Call { 
+    void makeCall(String number); 
+} 
+interface Browse { 
+    void browseInternet(String website); 
+} 
+class Phone implements Call, Browse 
+ {    
+    public void makeCall(String number) { 
+        System.out.println("Calling " + number + "..."); 
+    }  
+    public void browseInternet(String website) { 
+        System.out.println("Browsing " + website + "..."); 
+    } 
+} 
+public class MultipleInheritance { 
+    public static void main(String[] args) { 
+        Phone myPhone = new Phone(); 
+        myPhone.makeCall("123-456-7890"); 
+        myPhone.browseInternet("www.google.com"); 
+    } 
+}

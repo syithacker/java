@@ -1,0 +1,41 @@
+public class StringOperations { 
+    public static void main(String[] args) { 
+        // Initialization of strings 
+        String str1 = "  Hello  "; 
+        String str2 = "World"; 
+ 
+        // Concatenation 
+        String concatStr = str1.trim() + " " + str2; 
+        System.out.println("Concatenated String: " + concatStr); 
+ 
+        // Length of string 
+        System.out.println("Length of str1: " + str1.length()); 
+ 
+        // Substring 
+        String subStr = str1.substring(1, 4); 
+        System.out.println("Substring of str1 from index 1 to 3: " + subStr); 
+ 
+        // String comparison 
+        boolean isEqual = str1.trim().equalsIgnoreCase(str2); 
+        System.out.println("Are str1 and str2 equal? " + isEqual); 
+ 
+        // Convert to uppercase 
+        System.out.println("str1 in uppercase: " + str1.toUpperCase()); 
+ 
+        // Convert to lowercase 
+        System.out.println("str1 in lowercase: " + str1.toLowerCase()); 
+ 
+        // Replace characters 
+        System.out.println("str1 with 'e' replaced by 'a': " + str1.replace('e', 'a')); 
+ 
+        // Character at specific index 
+        System.out.println("Character at index 2 in str1: " + str1.charAt(2)); 
+ 
+        // Trim spaces 
+        System.out.println("str1 with trimmed spaces: '" + str1.trim() + "'"); 
+ 
+        // Reverse string 
+        String reversedStr = new StringBuilder(str1).reverse().toString(); 
+        System.out.println("Reversed str1: " + reversedStr); 
+    } 
+}

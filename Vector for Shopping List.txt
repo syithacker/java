@@ -1,0 +1,27 @@
+import java.util.List; 
+import java.util.Vector; 
+ 
+public class ShoppingList { 
+    public static void main(String[] args) { 
+        List<String> shoppingList = new Vector<>(); 
+ 
+        shoppingList.add("Apples"); 
+        shoppingList.add("Bananas"); 
+        shoppingList.add("Oranges"); 
+ 
+        System.out.println("Shopping List: " + shoppingList); 
+ 
+        // Store the item to be removed 
+        String itemToRemove = "Bananas"; 
+         
+        // Check if the item exists before removing 
+        if (shoppingList.contains(itemToRemove)) { 
+            shoppingList.remove(itemToRemove); 
+            System.out.println("Removed Item: " + itemToRemove); 
+        } else { 
+            System.out.println("Item not found: " + itemToRemove); 
+        } 
+ 
+        System.out.println("Updated Shopping List: " + shoppingList); 
+    } 
+}

@@ -1,0 +1,31 @@
+//User Defined Exception 
+class CustomException extends Exception { 
+    public CustomException(String message) {  
+        super(message); 
+    } 
+} 
+ 
+import java.util.*; 
+public class UserException { 
+    public static void validate(int age) throws CustomException { 
+        if (age < 18) { 
+            throw new CustomException("Age is less than 18, access denied."); 
+        } else { 
+            System.out.println("Access granted."); 
+        } 
+    } 
+ 
+    public static void main(String[] args) {       
+System.out.println("Enter the age"); 
+Scanner scanner=new Scanner(System.in); 
+int year=scanner.nextInt(); 
+ try 
+ { 
+            validate(year); 
+        }  
+catch (CustomException e) 
+ { 
+            System.out.println("Caught the exception: " + e.getMessage()); 
+        } 
+    } 
+}
